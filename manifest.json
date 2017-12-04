@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Content Editor",
+  "description": "This extension allows the user to change the content of our sites",
+  "version": "1.0",
+  "content_scripts": [{
+    "js": ["jquery-3.2.1.min.js"],
+    "matches": ["http://*/*", "https://*/*"]
+  }],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Click to edit"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "https://api.github.com/"
+  ]
+}

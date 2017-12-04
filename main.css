@@ -1,0 +1,22 @@
+body {
+	width: 200px;
+	background-color: #efefef;
+	padding: 10px;
+}
+
+fieldset {
+	border: none;
+}
+
+label {
+	width: 100%;
+	text-transform: uppercase;
+	display: block;
+	padding-bottom: 10px;
+}
+
+input[type='text'] {
+	width: 100%;
+	padding: 7px;
+	margin-bottom: 20px;
+}
