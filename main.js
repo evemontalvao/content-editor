@@ -22,22 +22,34 @@ class ContentEditor {
 			this.getContent(credentials, domain)
 		}
 
-		this.getContent(encodedCredentials);
+		this.getContent(encodedCredentials, domain);
+	}
+
+	handleContent(response) {
+		let components = JSON.parse(response);
+		components = components.content;
+		components = window.atob(components);
+		components = JSON.parse(components);
+		components = components.content;
+		$('[data-login]').hide();
+		$('[data-components-list]').show();
+
+		for(let prop in components) {
+			$('[data-components-list]').find('ul').append('<li>' + prop + '</li>')
+		}
 	}
 
 	getContent(credentials, domain) {
 		let xhr = new XMLHttpRequest();
-		xhr.open('GET', 'https://api.github.com/repos/escaleseo/content-' + domain + '/contents/_content', true);
+		xhr.open('GET', 'https://api.github.com/repos/escaleseo/content-' + domain + '/contents/_content/home.json', true);
 		xhr.setRequestHeader('Authorization','Basic ' + credentials);
-		xhr.onreadystatechange = function(e) {
+		xhr.onreadystatechange = (function(e) {
 			if(xhr.readyState === 4) {
-
-				console.log(xhr.responseText);
+				this.handleContent(xhr.responseText);
 			} else {
 				console.log(xhr.statusText)
 			}
-
-		}
+		}).bind(this);
 		xhr.send(null);
 	}
 
