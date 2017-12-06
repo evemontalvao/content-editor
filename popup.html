@@ -5,22 +5,41 @@
 	<link rel="stylesheet" href="main.css">
 	<title>Document</title>
 </head>
-<body>
-	<form action="" data-login>
-		<fieldset data-popup>
-			<label for="">Username</label>
-			<input type="text" data-user value="">
-			<label for="">Password</label>
-			<input type="password" data-password value="">
-		</fieldset>
-		<input type="submit" data-submit>
-	</form>
+<body data-box>
+	<!-- LOGIN -->
+	<div class="contentEditor-title" data-title></div>
+	<section data-section data-login class="contentEditor-loginWrapper">
+		<div class="contentEditor-title">Preencha as informações para editar</div>
+		<form class="contentEditor-loginForm" data-login>
+			<label class="contentEditor-formLabel">Usuário do GitHub</label>
+			<input type="text" class="contentEditor-formInput" data-user value="evemontalvao">
+			<label class="contentEditor-formLabel">Senha do GitHub</label>
+			<input type="password" class="contentEditor-formInput" data-password value="eve210794">
+			<input type="submit" class="contentEditor-btnPrimary" value="Entrar">
+		</form>
+	</section>
+	<!-- END LOGIN -->
 
-	<div class="componentsList" data-components-list>
-		<ul>
-			<li data-components-list-item></li>
+	<!-- MENU -->
+	<section data-section class="contentEditor-menu" data-menu>
+		<div class="contentEditor-title" data-menu-title>Faça login para editar</div>
+		<dl class="contentEditor-definitionList">
+			<dt>Template:</dt>
+			<dd data-template>Product</dd>
+			<dt>Componentes:</dt>
+			<dd data-components>15</dd>
+		</dl>
+
+		<ul class="contentEditor-menuList" data-menu-list>
+			<li class="contentEditor-menuItem" data-menu-list-components>Componentes</li>
+			<ul data-components-list class="contentEditor-componentsList">
+			</ul>
+			<li class="contentEditor-menuItem">Adicionar Componente</li>
+			<li class="contentEditor-menuItem">Remover Componente</li>
 		</ul>
-	</div>
+	</section>
+	<!-- END MENU -->
+	
 	<script
 	src="jquery-3.2.1.min.js"
 	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="

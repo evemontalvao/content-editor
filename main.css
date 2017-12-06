@@ -1,22 +1,127 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
 body {
-	width: 200px;
+	width: 300px;
 	background-color: #efefef;
-	padding: 10px;
+	padding: 20px;
+	margin: 0;
 }
 
-fieldset {
-	border: none;
+.contentEditor-loginWrapper, .contentEditor-menu {
+	display: none;
 }
 
-label {
-	width: 100%;
+.contentEditor-title {
+	color: #0097A7;
 	text-transform: uppercase;
-	display: block;
-	padding-bottom: 10px;
+	font-size: 16px;
+	text-align: center;
+	margin-bottom: 20px;
+	font-weight: 600;
 }
 
-input[type='text'] {
+.contentEditor-formLabel {
+	text-transform: uppercase;
+	color: #aaa;
+	font-weight: 600;
 	width: 100%;
+	clear: both;
+}
+
+.contentEditor-formInput {
+	width: 100%;
+	clear: both;
+	border: none;
 	padding: 7px;
+	font-size: 14px;
+	color: #bbb;
+	border-radius: 3px;
 	margin-bottom: 20px;
+	margin-top: 5px;
+}
+
+.contentEditor-btnPrimary {
+	width: 100%;
+	background-color: #0097A7;
+	border: none;
+	padding: 7px;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 400;
+	cursor: pointer;
+}
+
+.contentEditor-btnPrimary:hover {
+	background-color: #00838F;
+}
+
+.contentEditor-definitionList, .contentEditor-menuList {
+	width: 100%;
+	padding: 0;
+	clear: both;
+}
+
+.contentEditor-definitionList dt {
+	color: #0097A7;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-style: 16px;
+	width: 50%;
+	float: left;
+	padding: 0 0 5px 0;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 10px;
+}
+.contentEditor-definitionList dd {
+	color: #a0a0a0;
+	font-weight: 400;
+	font-style: 16px;
+	padding-left: 10px;
+	width: 50%;
+	float: left;
+	text-align: right;
+	padding: 0 0 5px 0;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 10px;
+}
+
+.contentEditor-menuItem {
+	padding: 0;
+	list-style: none;
+	padding: 7px;
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	background-color: #bbb;
+	border-radius: 3px;
+	margin: 7px 0;
+	cursor: pointer;
+}
+
+.contentEditor-menuItem:hover {
+	background-color: #ccc;
+}
+
+.contentEditor-componentsList {
+	display: none;
+}
+
+.contentEditor-componentsList li {
+	padding: 5px 0;
+	margin-bottom: 5px;
+	background-color: rgba(255,255,255,0.5);
+	color: #0097A7;
+	border-radius: 3px;
+	list-style: none;
+	cursor: pointer;
+	text-align: center;
+}
+
+.contentEditor-componentsList li:hover {
+	background-color: rgba(255, 255, 255, 0.8);
 }

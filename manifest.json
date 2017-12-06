@@ -5,7 +5,7 @@
   "description": "This extension allows the user to change the content of our sites",
   "version": "1.0",
   "content_scripts": [{
-    "js": ["jquery-3.2.1.min.js"],
+    "js": ["jquery-3.2.1.min.js","content.js"],
     "matches": ["http://*/*", "https://*/*"]
   }],
   "browser_action": {
